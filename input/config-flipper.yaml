@@ -98,7 +98,7 @@ outlines:
     cutout:
       - type: outline
         name: raw
-        fillet: 3
+        fillet: 2
     keycap_outlines:
       - type: keys
         side: left
