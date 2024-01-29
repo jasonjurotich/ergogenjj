@@ -64,12 +64,16 @@ points:
             top: 
               column_net: P8
     thumb:
+      anchor:
+        ref: board_index_bottom
+        shift: [0.7cx, 1.14cy]
       rows:
+        first:
       columns:
-        inner:
-          anchor:
-            ref: board_index_bottom
-            shift: [0.7cx, 1.14cy]
+        home:
+          spread: cx
+          first: 
+            column_net: P3
 outlines:
   exports:
     raw: 
