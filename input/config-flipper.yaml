@@ -68,12 +68,14 @@ points:
         ref: board_index_bottom
         shift: [0.7cx, 1.14cy]
       rows:
-        first:
+        home:
       columns:
         home:
           spread: cx
-          first: 
-            column_net: P3
+          rows:
+            home:
+              column_net: P3
+              
 outlines:
   exports:
     raw: 
