@@ -77,6 +77,19 @@ points:
               top: 
                 # bind: [0.5,1,3,3]
                 column_net: P8
+    thumb:
+      anchor:
+        ref: board_index_bottom
+        shift: [-0.65cx, -1cy]
+      rows:
+        home:
+      columns:
+        home:
+          spread: cx
+          rows:
+            home:
+              column_net: P3
+              
 outlines:
   exports:
     raw: 
@@ -101,8 +114,8 @@ pcbs:
       promicro:
         type: promicro
         anchor:
-          ref: board_far_home
-          shift: [-25, -17]
+          ref: board_index_bottom
+          shift: [-1.25cx, -1.1cy]
           rotate: 0
         params:
           orientation: down
@@ -161,6 +174,6 @@ pcbs:
         nets: 
           neg: GND
         anchor:
-          ref: board_far_bottom
-          shift: [-42 , -0]
+          ref: board_index_bottom
+          shift: [-0.3cx, -1.1cy]
           rotate: 0
