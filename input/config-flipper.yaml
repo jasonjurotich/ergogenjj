@@ -1,3 +1,6 @@
+# https://www.youtube.com/watch?v=M_VuXVErD6E&list=PLfCL9tw4dakOI4RGirPnbMfJmBJetJe2w&index=46&t=1136s
+# node src/cli.js input/config-flipper.yaml -o output/flipper
+
 points:
    key:
       padding: cy
@@ -80,7 +83,7 @@ points:
     thumb:
       anchor:
         ref: board_index_bottom
-        shift: [-0.65cx, -1cy]
+        shift: [-0.35cx, -1cy]
       rows:
         home:
       columns:
@@ -115,15 +118,15 @@ pcbs:
         type: promicro
         anchor:
           ref: board_index_bottom
-          shift: [-1.25cx, -1.1cy]
+          shift: [-1.5cx, -1.1cy]
           rotate: 0
         params:
           orientation: down
       pcm12:
         type: pcm12
         anchor:
-          ref: board_far_home
-          shift: [-75, -22]
+          ref: board_index_bottom
+          shift: [-0.25cx, -1.5cy]
           rotate: 0
         nets:
           from: pos  
@@ -133,29 +136,30 @@ pcbs:
       via3:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [-2,-10]
+          ref: board_index_bottom
+          shift: [-0.5cx, -0.9cy]
         nets: 
           net: RAW 
       via4:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [-4,-10]
+          ref: board_index_bottom
+          shift: [-0.5cx, -1.2cy]
+          # shift: [-4,-10]
         nets: 
           net: pos 
       via5:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [8,-10]
+          ref: board_index_bottom
+          shift: [0cx, -0.9cy]
         nets: 
           net: GND 
       via6:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [6,-10]
+          ref: board_index_bottom
+          shift: [0cx, -1.2cy]
         nets: 
           net: RST 
       b3u1000p:
@@ -164,8 +168,8 @@ pcbs:
           r1: RST  
           r2: GND
         anchor:
-          ref: board_pinkie_bottom
-          shift: [7, -15]
+          ref: board_index_bottom
+          shift: [-0.27cx, -.7cy]
           rotate: 0
         params:
           reverse: true 
@@ -175,5 +179,5 @@ pcbs:
           neg: GND
         anchor:
           ref: board_index_bottom
-          shift: [-0.3cx, -1.1cy]
-          rotate: 0
+          shift: [-0.27cx, -0.95cy]
+          rotate: 90
