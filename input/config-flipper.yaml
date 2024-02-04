@@ -98,11 +98,11 @@ outlines:
     raw: 
       - type: keys
         side: left
-        size: [1cx , 1cx]
+        size: [1.06cx , 1.06cy]
     cutout:
       - type: outline
         name: raw
-        fillet: 3
+        fillet: 1
     keycap_outlines:
       - type: keys
         side: left
