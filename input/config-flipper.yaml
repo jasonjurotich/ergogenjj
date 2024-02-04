@@ -36,7 +36,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 20, 0] # top, right, bottom, left
+                bind: [0, 0, 19, 0] # top, right, bottom, left
                 column_net: P19
               home: 
                 # bind: [3,0,3,1]
@@ -48,7 +48,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 20, 0] # top, right, bottom, left
+                bind: [0, 0, 19, 0] # top, right, bottom, left
                 column_net: P14
               home: 
                 # bind: [3,0,3,0]
@@ -60,7 +60,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 20, 0] # top, right, bottom, left
+                bind: [0, 0, 19, 0] # top, right, bottom, left
                 column_net: P4
               home: 
                 # bind: [3,0,3,0]
