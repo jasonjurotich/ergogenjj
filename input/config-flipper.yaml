@@ -91,6 +91,7 @@ points:
           spread: cx
           rows:
             home:
+              bind: [0, 0, 2, 0] # top, right, bottom, left
               column_net: P3
               
 outlines:
@@ -118,7 +119,7 @@ pcbs:
         type: promicro
         anchor:
           ref: board_index_bottom
-          shift: [-1.5cx, -1.1cy]
+          shift: [-1.44cx, -1.1cy]
           rotate: 0
         params:
           orientation: down
