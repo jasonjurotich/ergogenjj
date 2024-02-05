@@ -36,7 +36,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 19, 0] # top, right, bottom, left
+                bind: [0, 0, 0, 0] # top, right, bottom, left
                 column_net: P19
               home: 
                 # bind: [3,0,3,1]
@@ -48,7 +48,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 19, 0] # top, right, bottom, left
+                bind: [0, 0, 18.2, 12.5] # top, right, bottom, left
                 column_net: P14
               home: 
                 # bind: [3,0,3,0]
@@ -60,7 +60,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 19, 0] # top, right, bottom, left
+                bind: [0, 13, 18.2, 0] # top, right, bottom, left
                 column_net: P4
               home: 
                 # bind: [3,0,3,0]
@@ -83,7 +83,7 @@ points:
     thumb:
       anchor:
         ref: board_index_bottom
-        shift: [-0.35cx, -1.07cy]
+        shift: [-0.35cx, -1.04cy]
       rows:
         home:
       columns:
@@ -91,8 +91,8 @@ points:
           spread: cx
           rows:
             home:
-              bind: [2, 0, 0.3, 0] # top, right, bottom, left
-              rotate: -4.5
+              bind: [2, 0, 0, 0] # top, right, bottom, left
+              # rotate: -4.5
               column_net: P3
               
 outlines:
@@ -104,7 +104,7 @@ outlines:
     cutout:
       - type: outline
         name: raw
-        fillet: 1
+        fillet: 2
     keycap_outlines:
       - type: keys
         side: left
@@ -120,7 +120,7 @@ pcbs:
         type: promicro
         anchor:
           ref: board_index_bottom
-          shift: [-1.44cx, -1.1cy]
+          shift: [-1.3cx, -1.05cy]
           rotate: 0
         params:
           orientation: down
@@ -128,8 +128,8 @@ pcbs:
         type: pcm12
         anchor:
           ref: board_index_bottom
-          shift: [-0.25cx, -1.5cy]
-          rotate: 0
+          shift: [1.13cx, -1.27cy]
+          rotate: 90
         nets:
           from: pos  
           to: RAW
@@ -139,29 +139,28 @@ pcbs:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [-0.5cx, -0.9cy]
+          shift: [0.4cx, -1.4cy]
         nets: 
           net: RAW 
       via4:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [-0.5cx, -1.2cy]
-          # shift: [-4,-10]
+          shift: [0.4cx, -1.5cy]
         nets: 
           net: pos 
       via5:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0cx, -0.9cy]
+          shift: [0.4cx, -0.3cy]
         nets: 
           net: GND 
       via6:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0cx, -1.2cy]
+          shift: [0.4cx, -0.2cy]
         nets: 
           net: RST 
       b3u1000p:
@@ -171,7 +170,7 @@ pcbs:
           r2: GND
         anchor:
           ref: board_index_bottom
-          shift: [1.35cx, -.7cy]
+          shift: [1.35cx, -.72cy]
           rotate: 90
         params:
           reverse: true 
@@ -181,5 +180,5 @@ pcbs:
           neg: GND
         anchor:
           ref: board_index_bottom
-          shift: [-0.27cx, -0.95cy]
+          shift: [-0.1cx, -0.7cy]
           rotate: 90
