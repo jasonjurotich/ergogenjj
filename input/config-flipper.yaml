@@ -48,7 +48,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 18.2, 12.5] # top, right, bottom, left
+                bind: [0, 0, 18.2, 14.3] # top, right, bottom, left
                 column_net: P14
               home: 
                 # bind: [3,0,3,0]
@@ -124,7 +124,7 @@ pcbs:
           rotate: 0
         params:
           orientation: down
-      pcm12:
+      pcm12: # BUG has not been put under the board yet!!!!
         type: pcm12
         anchor:
           ref: board_index_bottom
@@ -139,14 +139,14 @@ pcbs:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0.4cx, -1.4cy]
+          shift: [0.4cx, -1.3cy]
         nets: 
           net: RAW 
       via4:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0.4cx, -1.5cy]
+          shift: [0.4cx, -1.54cy]
         nets: 
           net: pos 
       via5:
@@ -180,5 +180,5 @@ pcbs:
           neg: GND
         anchor:
           ref: board_index_bottom
-          shift: [-0.1cx, -0.7cy]
+          shift: [-0.15cx, -1.45cy]
           rotate: 90
