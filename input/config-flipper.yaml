@@ -91,7 +91,7 @@ points:
           spread: cx
           rows:
             home:
-              bind: [2, 0, 0, 0] # top, right, bottom, left
+              bind: [2, 0, 0.3, 0] # top, right, bottom, left
               rotate: -4.5
               column_net: P3
               
@@ -171,7 +171,7 @@ pcbs:
           r2: GND
         anchor:
           ref: board_index_bottom
-          shift: [1.4cx, -.7cy]
+          shift: [1.35cx, -.7cy]
           rotate: 90
         params:
           reverse: true 
