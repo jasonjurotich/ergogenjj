@@ -48,7 +48,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 18.2, 14.3] # top, right, bottom, left
+                bind: [0, 0, 18.2, 7] # top, right, bottom, left
                 column_net: P14
               home: 
                 # bind: [3,0,3,0]
@@ -120,7 +120,7 @@ pcbs:
         type: promicro
         anchor:
           ref: board_index_bottom
-          shift: [-1.3cx, -1.05cy]
+          shift: [-0.9cx, -1.05cy]
           rotate: 0
         params:
           orientation: down
@@ -180,6 +180,6 @@ pcbs:
           neg: GND
         anchor:
           ref: board_index_bottom
-          shift: [-0.15cx, -1.45cy]
-          rotate: 90
+          shift: [0cx, -1cy]
+          rotate: 0
 
