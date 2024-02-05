@@ -72,7 +72,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                # bind: [3,1, 0, 73]
+                bind: [0, 0, 7, 0] # top, right, bottom, left
                 column_net: P9
               home: 
                 # bind: [3,1,3,0]
@@ -83,7 +83,7 @@ points:
     thumb:
       anchor:
         ref: board_index_bottom
-        shift: [-0.35cx, -1cy]
+        shift: [-0.35cx, -1.07cy]
       rows:
         home:
       columns:
@@ -91,7 +91,8 @@ points:
           spread: cx
           rows:
             home:
-              bind: [0, 0, 2, 0] # top, right, bottom, left
+              bind: [2, 0, 0, 0] # top, right, bottom, left
+              rotate: -4.5
               column_net: P3
               
 outlines:
@@ -170,8 +171,8 @@ pcbs:
           r2: GND
         anchor:
           ref: board_index_bottom
-          shift: [-0.27cx, -.7cy]
-          rotate: 0
+          shift: [1.4cx, -.7cy]
+          rotate: 90
         params:
           reverse: true 
       bat:
