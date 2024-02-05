@@ -21,55 +21,69 @@ points:
         home:
         top:
       columns:
-        pinkie:
-          spread: cx
-          rows:
-            bottom:
-              column_net: P21
-            home:
-              column_net: P20
-            top: 
-              column_net: P17
-        ring:
-          spread: cx
-          rows: 
-            bottom:
-              column_net: P19
-            home: 
-              column_net: P18
-            top: 
-              column_net: P15
-        middle: 
-          spread: cx
-          rows: 
-            bottom:
-              column_net: P14
-            home: 
-              column_net: P16
-            top:
-              column_net: P10
-        index: 
-          spread: cx
-          rows: 
-            bottom:
-              column_net: P4
-            home: 
-              column_net: P5
-            top: 
-              column_net: P6
-        far: 
-          spread: cx
-          rows: 
-            bottom:
-              column_net: P9
-            home: 
-              column_net: P7 
-            top: 
-              column_net: P8
+          pinkie:
+             spread: cx
+             rows: 
+              bottom:
+                # bind: [0, 0, 0, 1]
+                column_net: P21
+              home:
+                # bind: [0.5, 3, 3, 1]
+                column_net: P20
+              top: 
+                column_net: P17
+          ring:
+            spread: cx
+            rows: 
+              bottom:
+                bind: [0, 0, 0, 0] # top, right, bottom, left
+                column_net: P19
+              home: 
+                # bind: [3,0,3,1]
+                column_net: P18
+              top: 
+                # bind: [0.5,3,0,1]
+                column_net: P15
+          middle: 
+            spread: cx
+            rows: 
+              bottom:
+                bind: [0, 0, 18.2, 14.3] # top, right, bottom, left
+                column_net: P14
+              home: 
+                # bind: [3,0,3,0]
+                column_net: P16
+              top:
+                column_net: P10
+                # bind: [0.5,1,0,1]
+          index: 
+            spread: cx
+            rows: 
+              bottom:
+                bind: [0, 13, 18.2, 0] # top, right, bottom, left
+                column_net: P4
+              home: 
+                # bind: [3,0,3,0]
+                column_net: P5
+              top: 
+                # bind: [0.5,1,3,3]
+                column_net: P6
+          far: 
+            spread: cx
+            rows: 
+              bottom:
+                bind: [0, 0, 7, 0] # top, right, bottom, left
+                column_net: P9
+              home: 
+                # bind: [3,1,3,0]
+                column_net: P7 
+              top: 
+                # bind: [0.5,1,3,3]
+                column_net: P8
     thumb:
       anchor:
         ref: board_index_bottom
-        shift: [0.7cx, 1.14cy]
+        shift: [-0.35cx, -1.04cy]
       rows:
         home:
       columns:
@@ -77,6 +91,8 @@ points:
           spread: cx
           rows:
             home:
+              bind: [2, 0, 0, 0] # top, right, bottom, left
+              # rotate: -4.5
               column_net: P3
               
 outlines:
@@ -84,7 +100,7 @@ outlines:
     raw: 
       - type: keys
         side: left
-        size: [1cx , 1cx]
+        size: [1.06cx , 1.06cy]
     cutout:
       - type: outline
         name: raw
@@ -103,17 +119,17 @@ pcbs:
       promicro:
         type: promicro
         anchor:
-          ref: board_far_home
-          shift: [-25, -17]
+          ref: board_index_bottom
+          shift: [-1.3cx, -1.05cy]
           rotate: 0
         params:
           orientation: down
-      pcm12:
+      pcm12: # BUG has not been put under the board yet!!!!
         type: pcm12
         anchor:
-          ref: board_far_home
-          shift: [-75, -22]
-          rotate: 0
+          ref: board_index_bottom
+          shift: [1.13cx, -1.27cy]
+          rotate: 90
         nets:
           from: pos  
           to: RAW
@@ -122,29 +138,29 @@ pcbs:
       via3:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [-2,-10]
+          ref: board_index_bottom
+          shift: [0.4cx, -1.3cy]
         nets: 
           net: RAW 
       via4:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [-4,-10]
+          ref: board_index_bottom
+          shift: [0.4cx, -1.54cy]
         nets: 
           net: pos 
       via5:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [8,-10]
+          ref: board_index_bottom
+          shift: [0.4cx, -0.3cy]
         nets: 
           net: GND 
       via6:
         type: via
         anchor: 
-          ref: board_pinkie_bottom
-          shift: [6,-10]
+          ref: board_index_bottom
+          shift: [0.4cx, -0.2cy]
         nets: 
           net: RST 
       b3u1000p:
@@ -153,9 +169,9 @@ pcbs:
           r1: RST  
           r2: GND
         anchor:
-          ref: board_pinkie_bottom
-          shift: [7, -15]
-          rotate: 0
+          ref: board_index_bottom
+          shift: [1.35cx, -.72cy]
+          rotate: 90
         params:
           reverse: true 
       bat:
@@ -163,6 +179,7 @@ pcbs:
         nets: 
           neg: GND
         anchor:
-          ref: board_far_bottom
-          shift: [-42 , -0]
-          rotate: 0
+          ref: board_index_bottom
+          shift: [-0.15cx, -1.45cy]
+          rotate: 90
+
