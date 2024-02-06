@@ -84,6 +84,7 @@ points:
     thumb:
       anchor:
         ref: board_index_bottom
+        # BUG needs to be -0.5cx or -0.6cx over
         shift: [-0.2cx, -1cx] # -0.973cx
       rows:
         home:
