@@ -25,12 +25,13 @@ points:
              spread: cx
              rows: 
               bottom:
-                # bind: [0, 0, 0, 1]
+                bind: [0, 0, 0, 0.5]
                 column_net: P21
               home:
-                # bind: [0.5, 3, 3, 1]
+                bind: [0, 0, 0, 0.5]
                 column_net: P20
               top: 
+                bind: [0.0, 0, 0, 0.5]
                 column_net: P17
           ring:
             spread: cx
@@ -48,7 +49,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 18.2, 7] # top, right, bottom, left
+                bind: [0, 0, 0, 0] # top, right, bottom, left
                 column_net: P14
               home: 
                 # bind: [3,0,3,0]
@@ -60,7 +61,7 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 13, 18.2, 0] # top, right, bottom, left
+                bind: [0, 0, 0, 0] # top, right, bottom, left
                 column_net: P4
               home: 
                 # bind: [3,0,3,0]
@@ -72,18 +73,18 @@ points:
             spread: cx
             rows: 
               bottom:
-                bind: [0, 0, 7, 0] # top, right, bottom, left
+                bind: [0, 0.5, 0, 0] # top, right, bottom, left
                 column_net: P9
               home: 
-                # bind: [3,1,3,0]
+                bind: [0, 0.5, 0, 0] # top, right, bottom, left
                 column_net: P7 
               top: 
-                # bind: [0.5,1,3,3]
+                bind: [0, 0.5, 0, 0] # top, right, bottom, left
                 column_net: P8
     thumb:
       anchor:
         ref: board_index_bottom
-        shift: [-0.35cx, -1.04cy]
+        shift: [-0.2cx, -1cx] # -0.973cx
       rows:
         home:
       columns:
@@ -91,8 +92,8 @@ points:
           spread: cx
           rows:
             home:
-              bind: [2, 0, 0, 0] # top, right, bottom, left
-              # rotate: -4.5
+              bind: [36, 0, 0, 0.5] # top, right, bottom, left
+              rotate: 90
               column_net: P3
               
 outlines:
@@ -100,11 +101,18 @@ outlines:
     raw: 
       - type: keys
         side: left
-        size: [1.06cx , 1.06cy]
+        size: [1cx , 1cx]
+      - type: rectangle
+        size: [7, 5]
+        anchor:
+          ref: board_index_bottom
+          shift: [-1.55cx, -0.84cy]
+          rotate: 90
+
     cutout:
       - type: outline
         name: raw
-        fillet: 2
+        fillet: 1
     keycap_outlines:
       - type: keys
         side: left
@@ -120,16 +128,16 @@ pcbs:
         type: promicro
         anchor:
           ref: board_index_bottom
-          shift: [-0.9cx, -1.05cy]
+          shift: [-0.65cx, -1.055cy]
           rotate: 0
         params:
           orientation: down
-      pcm12: # BUG has not been put under the board yet!!!!
+      pcm12: 
         type: pcm12
         anchor:
           ref: board_index_bottom
-          shift: [1.13cx, -1.27cy]
-          rotate: 90
+          shift: [-1.55cx, -1.17cy]
+          rotate: -90
         nets:
           from: pos  
           to: RAW
@@ -139,28 +147,28 @@ pcbs:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0.4cx, -1.3cy]
+          shift: [-1.32cx, -1.2cy]
         nets: 
           net: RAW 
       via4:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0.4cx, -1.54cy]
+          shift: [-1.32cx, -1.05cy]
         nets: 
           net: pos 
       via5:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0.4cx, -0.3cy]
+          shift: [-1.6cx, -0.75cy]
         nets: 
           net: GND 
       via6:
         type: via
         anchor: 
           ref: board_index_bottom
-          shift: [0.4cx, -0.2cy]
+          shift: [-1.6cx, -0.65cy]
         nets: 
           net: RST 
       b3u1000p:
@@ -170,7 +178,7 @@ pcbs:
           r2: GND
         anchor:
           ref: board_index_bottom
-          shift: [1.35cx, -.72cy]
+          shift: [-1.72cx, -.65cy]
           rotate: 90
         params:
           reverse: true 
@@ -180,6 +188,6 @@ pcbs:
           neg: GND
         anchor:
           ref: board_index_bottom
-          shift: [0cx, -1cy]
+          shift: [0.25cx, -1cy]
           rotate: 0
 
